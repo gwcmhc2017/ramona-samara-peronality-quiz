@@ -23,30 +23,33 @@ $(document).ready(function() {
       notHappyCounter++;
     });
     $("#sunflowerSeeds").click(function() {
-      happy++;
+      happyCounter++;
     });
     $("pepsi").click(function() {
-      happy++;
+      happyCounter++;
     });
     $("#cocaCola").click(function() {
       notHappyCounter++;
     });
     $("#apple").click(function() {
-      happy++;
+      happyCounter++;
     });
     $("#android").click(function() {
       notHappyCounter++;
     });
     $("#milkChocolate").click(function() {
-      happy++;
+      happyCounter++;
     });
     $("#darkChocolate").click(function() {
       notHappyCounter++;
     });
     $("#submit").click(function() {
-      if (happyCounter < notHappyCounter) {
+      if (happyCounter > notHappyCounter) {
         $("#result").text("you are happy with life");
-      } else if (happyCounter > notHappyCounter) $("#result").text("you arent happy with life");
+      } else if (happyCounter < notHappyCounter) {
+        console.log("arent happy");
+        $("#result").text("you arent happy with life");
+      }
     });
 
     // $('button').click(function(){
